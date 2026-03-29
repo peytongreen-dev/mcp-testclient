@@ -1,5 +1,9 @@
 # mcp-testclient
 
+[![CI](https://github.com/peytongreen-dev/mcp-testclient/actions/workflows/ci.yml/badge.svg)](https://github.com/peytongreen-dev/mcp-testclient/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/mcp-testclient.svg)](https://pypi.org/project/mcp-testclient/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://python.org)
+
 pytest-native TestClient for the [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) `Server` class.
 
 > **Using FastMCP?** You already have [`Client(server)`](https://gofastmcp.com/clients/client) built in. mcp-testclient targets the official `mcp.server.lowlevel.Server` class only.
