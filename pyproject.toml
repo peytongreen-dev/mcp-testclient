@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-testclient"
+version = "0.1.0"
+description = "pytest-native TestClient for the MCP Python SDK Server class"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["mcp", "testing", "pytest", "llm", "ai-agents"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = [
+    "mcp>=1.0.0",
+    "anyio>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/peytongreen-dev/mcp-testclient"
+Repository = "https://github.com/peytongreen-dev/mcp-testclient"
+Issues = "https://github.com/peytongreen-dev/mcp-testclient/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "anyio[trio]",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_testclient"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+python_classes = ["Test_*", "*Tests", "*Suite"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
