@@ -1,0 +1,13 @@
+{
+  "name": "io.github.peytongreen-dev/mcp-testclient",
+  "display_name": "mcp-testclient",
+  "description": "pytest-native TestClient for the MCP Python SDK Server class. In-process testing with no subprocess, no network, no stdio. Uses anyio memory streams.",
+  "homepage": "https://github.com/peytongreen-dev/mcp-testclient",
+  "repository": "https://github.com/peytongreen-dev/mcp-testclient",
+  "license": "MIT",
+  "tags": ["python", "testing", "pytest", "mcp", "sdk"],
+  "categories": ["developer-tools", "testing"],
+  "install": {
+    "pypi": "mcp-testclient"
+  }
+}
