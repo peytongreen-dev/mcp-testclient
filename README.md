@@ -65,6 +65,20 @@ with TestClient(server) as client:
 - Python 3.10, 3.11, 3.12
 - `mcp >= 1.0.0` (tested on 1.26.0)
 
+## Known Issues
+
+**MCP SDK v1.9.1+: default host changed to `127.0.0.1`**
+
+Docker containers will be unreachable externally. Explicitly set `host='0.0.0.0'` in your FastMCP or server config if deploying in a container.
+
+**MCP SDK v1.9.4+: Streamable HTTP incompatible with Cloud Run**
+
+If you're hitting connection errors on Cloud Run after upgrading, downgrade the SDK or use SSE transport temporarily until a fix ships upstream.
+
+**SSE transport deprecated as of April 1, 2026** (grace period through June 30, 2026)
+
+All SSE-based MCP servers need to migrate to Streamable HTTP by end of June. See the [MCP spec migration guide](https://modelcontextprotocol.io) for details.
+
 ## MCP Registry
 
 ```
